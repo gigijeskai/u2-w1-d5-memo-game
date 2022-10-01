@@ -1,0 +1,30 @@
+#tab-gioco {
+    /* border: solid red 3px; */
+    width: 400px;
+    height: 400px;
+}
+
+.card {
+    border: solid red 2px;  
+    width: 100px;
+    height: 96px;
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.section {
+    display: flex;
+}
+
+.flip {
+    background-color: blue;
+    font-size: 70px;
+}
+
+.match {
+    background-color: green;
+}
