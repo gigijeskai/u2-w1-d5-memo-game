@@ -1,8 +1,7 @@
  let carta1;
  let carta2;
 let tutteLeCarte = document.getElementsByClassName('card');
-
-
+let carteIndovinate
 function flip(giraCarta){
  giraCarta.target.classList.add('flip')
 
@@ -14,22 +13,32 @@ if (carta1 === undefined){
     
     for (let i = 0; i < tutteLeCarte.length;i++){
 tutteLeCarte[i].removeAttribute('onclick')
-}    
+}
 
- let carteUguali = confrontaCarte()
-if (carteUguali === true){
-carta1.classList.replace('flip','match')
-carta2.classList.replace('flip','match')
+carteIndovinate = carteUguali()
+if (carteIndovinate === true){
+    carta1.classList.replace('flip','match')
+    carta2.classList.replace('flip','match')
+    } else {
+        carta1.classList.remove('flip')
+        carta2.classList.remove('flip')
+    }
+}
+}
+ 
+
+ function carteUguali(){
+if(carta1 === carta2){
+return true
 } else {
-    carta1.classList.remove('flip')
-    carta2.classList.remove('flip')
+    (carta1 !== carta2)
+    return false
 }
-}
-}
-function  confrontaCarte(){
-    let carteselezionate = [carta1,carta2];
-    return carteselezionate
-}
+ }
+
+
+
+
 
 
 
