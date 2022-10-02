@@ -19,7 +19,7 @@ carteIndovinate = carteUguali()
 if (carteIndovinate === true){
     carta1.classList.replace('flip','match')
     carta2.classList.replace('flip','match')
-    } else {
+    } else { (carteIndovinate === false)
         carta1.classList.remove('flip')
         carta2.classList.remove('flip')
     }
@@ -27,7 +27,7 @@ if (carteIndovinate === true){
 }
  
 
- function carteUguali(){
+ function carteUguali(carta1, carta2){
 if(carta1 === carta2){
 return true
 } else {
