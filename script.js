@@ -23,17 +23,21 @@ if (carteIndovinate === true){
         carta1.classList.remove('flip')
         carta2.classList.remove('flip')
     }
+    carta1 = undefined;
+    carta2 = undefined;
 }
 }
  
 
  function carteUguali(carta1, carta2){
+    let carteIndovinate
 if(carta1 === carta2){
-return true
+carteIndovinate = true
 } else {
     (carta1 !== carta2)
-    return false
+    carteIndovinate = false
 }
+return carteIndovinate
  }
 
 
